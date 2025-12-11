@@ -12,7 +12,8 @@ function App() {
     } else if (value === "C") {
       setCalVal("");
     } else {
-      setCalVal(calVal + value);
+      let solution = calVal + value;
+      setCalVal(solution);
     }
   };
   return (
