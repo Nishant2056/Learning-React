@@ -21,7 +21,11 @@ const ButtonsPart = ({ onButtonClick }) => {
   return (
     <div className={css.buttonsContainer}>
       {numbers.map((num) => (
-        <button className={css.buttons} onClick={() => onButtonClick(num)}>
+        <button
+          key={num}
+          className={css.buttons}
+          onClick={() => onButtonClick(num)}
+        >
           {num}
         </button>
       ))}
