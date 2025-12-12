@@ -14,7 +14,7 @@ const InputPart = ({ onNewItem }) => {
 
   const handleSuccessButtonClicked = () => {
     if (!todoTask || !todoDate) {
-      alert("Please fill the required field!!!");
+      alert("Invalid Input. Please fill the required field!!!");
       return;
     }
     onNewItem(todoTask, todoDate);
