@@ -15,9 +15,13 @@ function App() {
   const handleOnKeyDown = (e) => {
     if (e.key === "Enter") {
       let newFoodItem = e.target.value;
-      let updatedFoodItems = [...fooditems, newFoodItem];
-      setFoodItems(updatedFoodItems);
-      e.target.value = "";
+      if (!newFoodItem) {
+        alert("please enter the foodItems");
+      } else {
+        let updatedFoodItems = [...fooditems, newFoodItem];
+        setFoodItems(updatedFoodItems);
+        e.target.value = "";
+      }
     }
   };
   return (
