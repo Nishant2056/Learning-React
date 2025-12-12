@@ -4,12 +4,7 @@ const TodoItems = ({ todoItems }) => {
   return (
     <div className={css.todoItemsContainer}>
       {todoItems.map((item, index) => (
-        <TodoUi
-          key={index}
-          task={item.task}
-          date={item.date}
-          priority={item.priority}
-        />
+        <TodoUi key={index} task={item.task} date={item.date} />
       ))}
     </div>
   );
