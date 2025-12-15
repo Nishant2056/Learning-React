@@ -42,7 +42,7 @@ const InputPart = ({ onNewItem }) => {
             className="btn btn-success"
             onClick={handleSuccessButtonClicked}
           >
-            Success
+            ADD
           </button>
         </div>
       </div>
