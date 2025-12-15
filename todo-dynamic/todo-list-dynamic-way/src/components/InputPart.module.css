@@ -1,0 +1,10 @@
+.successButton{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.kgInput{
+  width: 100%;
+}

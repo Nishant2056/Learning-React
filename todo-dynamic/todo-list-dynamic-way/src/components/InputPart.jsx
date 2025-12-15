@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { IoMdAddCircle } from "react-icons/io";
+import css from "./InputPart.module.css";
 
 const InputPart = ({ onNewItem }) => {
   const [todoTask, setTodoTask] = useState("");
@@ -29,20 +30,29 @@ const InputPart = ({ onNewItem }) => {
       onSubmit={handleSuccessButtonClicked}
       className="container text-center"
     >
-      <div className="row">
+      <div className="row justify-content-center">
         <div className="col-4">
           <input
             type="text"
             placeholder="Enter Todo task"
+            className={`${css.kgInput} form-control`}
             value={todoTask}
             onChange={handleDataInput}
           />
         </div>
         <div className="col-4">
-          <input type="date" value={todoDate} onChange={handleDataDate} />
+          <input
+            type="date"
+            value={todoDate}
+            className={`${css.kgInput} form-control`}
+            onChange={handleDataDate}
+          />
         </div>
         <div className="col-1">
-          <button className="btn btn-success">
+          <button
+            type="submit"
+            className={`${css.successButton} btn btn-success`}
+          >
             <IoMdAddCircle />
           </button>
         </div>
