@@ -1,12 +1,17 @@
-const TodoUi = ({ task, date }) => {
+import { MdOutlineDeleteForever } from "react-icons/md";
+const TodoUi = ({ task, date, onDeleteItem }) => {
   return (
     <div className="container">
       <div className="row kg-row">
         <div className="col-4">{task}</div>
         <div className="col-4">{date}</div>
         <div className="col-1">
-          <button type="button" className="btn btn-danger kg-button">
-            Delete
+          <button
+            type="button"
+            className="btn btn-danger kg-button"
+            onClick={() => onDeleteItem(task)}
+          >
+            <MdOutlineDeleteForever />
           </button>
         </div>
       </div>

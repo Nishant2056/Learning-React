@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { IoMdAddCircle } from "react-icons/io";
 
 const InputPart = ({ onNewItem }) => {
   const [todoTask, setTodoTask] = useState("");
@@ -12,7 +13,8 @@ const InputPart = ({ onNewItem }) => {
     setTodoDate(e.target.value);
   };
 
-  const handleSuccessButtonClicked = () => {
+  const handleSuccessButtonClicked = (e) => {
+    e.preventDefault();
     if (!todoTask || !todoDate) {
       alert("Invalid Input. Please fill the required field!!!");
       return;
@@ -23,7 +25,10 @@ const InputPart = ({ onNewItem }) => {
   };
 
   return (
-    <div className="container text-center">
+    <form
+      onSubmit={handleSuccessButtonClicked}
+      className="container text-center"
+    >
       <div className="row">
         <div className="col-4">
           <input
@@ -37,16 +42,12 @@ const InputPart = ({ onNewItem }) => {
           <input type="date" value={todoDate} onChange={handleDataDate} />
         </div>
         <div className="col-1">
-          <button
-            type="button"
-            className="btn btn-success"
-            onClick={handleSuccessButtonClicked}
-          >
-            Success
+          <button className="btn btn-success">
+            <IoMdAddCircle />
           </button>
         </div>
       </div>
-    </div>
+    </form>
   );
 };
 
