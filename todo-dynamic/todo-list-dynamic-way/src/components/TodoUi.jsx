@@ -1,5 +1,5 @@
 import css from "./TodoUi.module.css";
-import { MdOutlineDeleteForever } from "react-icons/md";
+import { FaTrashAlt } from "react-icons/fa";
 const TodoUi = ({ task, date, onDeleteItem }) => {
   return (
     <div className="container">
@@ -12,7 +12,7 @@ const TodoUi = ({ task, date, onDeleteItem }) => {
             className={`${css.kgButton} btn btn-danger`}
             onClick={() => onDeleteItem(task)}
           >
-            <MdOutlineDeleteForever />
+            <FaTrashAlt />
           </button>
         </div>
       </div>
