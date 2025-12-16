@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IoMdAddCircle } from "react-icons/io";
+import { FaPlus } from "react-icons/fa";
 import css from "./InputPart.module.css";
 
 const InputPart = ({ onNewItem }) => {
@@ -53,7 +53,7 @@ const InputPart = ({ onNewItem }) => {
             type="submit"
             className={`${css.successButton} btn btn-success`}
           >
-            <IoMdAddCircle />
+            <FaPlus />
           </button>
         </div>
       </div>
